@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -Wextra -Werror -pedantic "$CFILE" -o "$OUTPUT"
+gcc -o cisfun $CFILE
