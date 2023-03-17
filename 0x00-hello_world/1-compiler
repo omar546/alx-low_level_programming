@@ -1,2 +1,2 @@
 #!/bin/bash
-FILENAME=$(basename "$CFILE" .c)
+gcc -c $CFILE -o ${CFILE%.c}.o
