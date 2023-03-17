@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-	printf("Size of char: %lu bytes\n", sizeof(char));
-	printf("Size of short: %lu bytes\n", sizeof(short));
-	printf("Size of int: %lu bytes\n", sizeof(int));
-	printf("Size of long: %lu bytes\n", sizeof(long));
-	printf("Size of long long: %lu bytes\n", sizeof(long long));
-	printf("Size of float: %lu bytes\n", sizeof(float));
-	printf("Size of double: %lu bytes\n", sizeof(double));
-	printf("Size of long double: %lu bytes\n", sizeof(long double));
+	printf("The size of char is %zu bytes\n", sizeof(char));
+	printf("The size of short is %zu bytes\n", sizeof(short));
+	printf("The size of int is %zu bytes\n", sizeof(int));
+	printf("The size of long is %zu bytes\n", sizeof(long));
+	printf("The size of long long is %zu bytes\n", sizeof(long long));
+	printf("The size of float is %zu bytes\n", sizeof(float));
+	printf("The size of double is %zu bytes\n", sizeof(double));
+	printf("The size of long double is %zu bytes\n", sizeof(long double));
+	printf("The size of void* is %zu bytes\n", sizeof(void *));
+
 	return 0;
 }
