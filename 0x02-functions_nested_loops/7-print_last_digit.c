@@ -1,4 +1,6 @@
 #include "main.h"
+#include <limits.h>
+
 /**
  * print_last_digit - print last digit of n.
  * @n: the input number.
@@ -6,10 +8,11 @@
  */
 int print_last_digit(int n)
 {
+long nn = n;
 int last;
-if (n < 0)
-n = -n;
-last = n % 10;
+if (nn < 0)
+nn = -nn;
+last = nn % 10;
 _putchar('0' + last);
 return (last);
 }
