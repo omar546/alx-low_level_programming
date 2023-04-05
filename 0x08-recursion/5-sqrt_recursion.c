@@ -1,9 +1,10 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _sqrt_recursion_wrapper - a wrapper that does the recursion bit
  *
- * @n : input number
+ * @n: input number
  * @min: minimum number to guess
  * @max: maximum number to guess
  *
@@ -36,11 +37,9 @@ int _sqrt_recursion_wrapper(int n, int min, int max)
 */
 int _sqrt_recursion(int n)
 {
-	if (n == 1)		/*sqrt(1) == 1*/
-		return (1);
-	else if (n == 0)	/*sqrt(0) == 0*/
-		return (0);
-	else if (n < 0)		/*sqrt(-n) == -1 (NA)*/
+	if (n == 1 || n == 0)		/*sqrt(1) == 1, sqrt(0) == 0*/
+		return (n);
+	else if (n < 0)			/*sqrt(-n) == -1 (NA)*/
 		return (-1);
 	else
 		return (_sqrt_recursion_wrapper(n, 1, n));
