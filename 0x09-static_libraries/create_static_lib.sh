@@ -1,12 +1,15 @@
 #!/bin/bash
 
-# This script creates a static library called liball.a from all the .c files in the current directory.
+# Create a static library called liball.a from all .c files in the current directory
 
-# Compile all the .c files into .o files
-gcc -Wall -Wextra -Werror -pedantic -c *.c
+# Compile all .c files into .o files
+gcc -Wall -Werror -Wextra -pedantic -c *.c
 
 # Create the static library from the .o files
-ar rcs liball.a *.o
+ar -rc liball.a *.o
 
-# Cleanup: Remove the .o files
+# Index the library for efficient symbol lookup
+ranlib liball.a
+
+# Clean up the .o files
 rm *.o
