@@ -13,7 +13,6 @@
 int _sqrt_recursion_wrapper(int n, int min, int max)
 {
 int guess, guess_squared;
-
 guess = (min + max) / 2;        /*get guess (g)*/
 guess_squared = guess *guess;        /*square guess (sg)*/
 

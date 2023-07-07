@@ -11,7 +11,6 @@
 int _pow_recursion(int x, int y)
 {
 	int even;
-
 	if (y < 0)		/*if y is a negative number, return -1*/
 		return (-1);
 	else if (y == 0)	/*x to the power of 0 is 1*/
