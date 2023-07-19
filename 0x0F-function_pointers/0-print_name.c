@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "function_pointers.h"
 
 /**
@@ -7,8 +6,8 @@
  * @name: name to print
  * @f: function pointer that doesn't return anything
  *
- * Return: Always 0 (Success)
-*/
+ * Return: void
+ */
 
 void print_name(char *name, void (*f)(char *))
 {
