@@ -9,13 +9,6 @@
  * Return: n_nodes in the list as size_t
  */
 
-typedef struct Node {
-    unsigned int len;
-    char *str;
-    struct Node *next;
-} Node;
-
-
 size_t print_list(const list_t *h)
 {
 	unsigned int count = 0;
