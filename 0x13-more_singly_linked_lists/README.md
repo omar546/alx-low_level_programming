@@ -28,13 +28,13 @@ This repository contains C programs that demonstrate various operations on singl
 
 11. **10-delete_nodeint.c**: This program deletes the node at a given position in a singly linked list containing integers.
 
-12. **100-reverse_listint.c**: This program reverses a singly linked list containing integers.
+<!-- 12. **100-reverse_listint.c**: This program reverses a singly linked list containing integers.
 
 13. **101-print_listint_safe.c**: This program prints a singly linked list containing integers and handles loops in the list safely.
 
 14. **102-free_listint_safe.c**: This program frees a singly linked list containing integers, even if it has loops.
 
-15. **103-find_loop.c**: This program finds the loop in a singly linked list containing integers and returns the address of the first node in the loop.
+15. **103-find_loop.c**: This program finds the loop in a singly linked list containing integers and returns the address of the first node in the loop. -->
 
 ## How to Use
 
@@ -63,4 +63,3 @@ gcc -Wall -Werror -Wextra -pedantic <program_name.c> -o <output_executable_name>
 ```
 ./<output_executable_name>
 ```
-
