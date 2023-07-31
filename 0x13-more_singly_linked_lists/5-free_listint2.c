@@ -5,6 +5,7 @@
  * @head: a
  * Return: Always 0.
  */
+
 void free_listint2(listint_t **head)
 {
 	listint_t *nav, *na2;

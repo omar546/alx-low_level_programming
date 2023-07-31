@@ -5,6 +5,7 @@
  * @head: a
  * Return: Always 0.
  */
+
 int pop_listint(listint_t **head)
 {
 	listint_t *tmp;

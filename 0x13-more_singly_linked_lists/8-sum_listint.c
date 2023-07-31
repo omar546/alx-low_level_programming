@@ -5,6 +5,7 @@
  * @head: a
  * Return: Always 0.
  */
+
 int sum_listint(listint_t *head)
 {
 	listint_t *nav = head;
