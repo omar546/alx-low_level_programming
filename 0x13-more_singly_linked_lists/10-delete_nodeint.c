@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes the node at a given position in a singly linked list containing integers
+ * delete_nodeint_at_index - deletes the node at a 
+ * given position in a singly linked list containing integers
  * @head: a
  * @index: a
  * Return: Always 0.

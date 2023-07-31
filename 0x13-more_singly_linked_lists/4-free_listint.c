@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * free_listint - frees the memory allocated for a singly linked list containing integers
+ * free_listint - frees the memory allocated for 
+ * a singly linked list containing integers
  * @head: a
  * Return: Always 0.
  */

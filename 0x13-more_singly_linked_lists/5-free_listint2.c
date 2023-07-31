@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees the memory allocated for a singly linked list containing integers and sets the head to NULL
+ * free_listint2 - frees the memory allocated for a singly 
+ * linked list containing integers and sets the head to NULL
  * @head: a
  * Return: Always 0.
  */
