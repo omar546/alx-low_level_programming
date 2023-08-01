@@ -9,13 +9,13 @@
 
 int sum_listint(listint_t *head)
 {
-	listint_t *nav = head;
-	size_t count = 0;
+listint_t *nav = head;
+size_t count = 0;
 
-	while (nav)
-	{
-		count += nav->n;
-		nav = nav->next;
-	}
-	return (count);
+while (nav)
+{
+count += nav->n;
+nav = nav->next;
+}
+return (count);
 }
