@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * sum_listint - calculates the sum of all the data (integers) 
+ * sum_listint - calculates
+ * the sum of all the data (integers)
  * stored in a singly linked list
  * @head: a
  * Return: Always 0.

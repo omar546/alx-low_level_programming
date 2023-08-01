@@ -1,8 +1,11 @@
 #include "lists.h"
 
 /**
- * pop_listint - deletes the head node of a singly linked 
- * list containing integers and returns the head node's data
+ * pop_listint - deletes
+ * the head node of a
+ * singly linked
+ * list containing integers
+ * and returns the head node's data
  * @head: a
  * Return: Always 0.
  */

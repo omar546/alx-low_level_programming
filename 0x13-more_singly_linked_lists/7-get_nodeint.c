@@ -1,8 +1,10 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - calc the nth node of 
- * a singly linked list containing integers
+ * get_nodeint_at_index -
+ * calc the nth node of
+ * a singly linked list
+ * containing integers
  * @head: a
  * @index: a
  * Return: Always 0.
