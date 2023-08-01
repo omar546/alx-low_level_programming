@@ -2,7 +2,8 @@
 
 /**
  * insert_nodeint_at_index -
- * inserts a new node at a given position in
+ * inserts a new node at
+ * a given position in
  * a singly linked list containing integers
  * @head: a
  * @idx: a
@@ -10,7 +11,10 @@
  * Return: Always 0.
  */
 
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index
+(
+listint_t **head, unsigned int idx, int n
+)
 {
 listint_t *nav, *new, *before;
 unsigned int i = 0;
