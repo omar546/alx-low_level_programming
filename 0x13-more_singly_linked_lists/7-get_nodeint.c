@@ -1,10 +1,8 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index -
- * calc the nth node of
- * a singly linked list
- * containing integers
+ * get_nodeint_at_index - calc the nth node of 
+ * a singly linked list containing integers
  * @head: a
  * @index: a
  * Return: Always 0.
@@ -12,19 +10,23 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-listint_t *nav;
-unsigned int i = 0;
+	listint_t *nav;
+	unsigned int i = 0;
 
-if (!head)
-return (NULL);
-nav = head;
-while (nav)
-{
-if (i == index)
-return (nav);
-nav = nav->next;
-i++;
-}
+	if (!head)
+	{
+		return (NULL);
+	}
+	nav = head;
+	while (nav)
+	{
+		if (i == index)
+		{	
+			return (nav);
+		}
+		nav = nav->next;
+		i++;
+	}
 
-return (NULL);
+	return (NULL);
 }
