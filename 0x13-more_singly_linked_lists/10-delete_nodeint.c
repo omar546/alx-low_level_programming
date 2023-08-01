@@ -10,7 +10,7 @@
  * Return: Always 0.
  */
 
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head,unsigned int index)
 {
 listint_t *nav, *before, *deleted;
 unsigned int i = 0;
