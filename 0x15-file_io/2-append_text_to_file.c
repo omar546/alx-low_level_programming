@@ -1,55 +1,38 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
 #include <unistd.h>
-
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 /**
- * error_exit - Prints an error message and exits with the specified code.
- * @msg: The error message to print.
- * @exit_code: The exit code to use.
- */
-void error_exit(const char *msg, int exit_code)
-{
-    dprintf(STDERR_FILENO, "%s\n", msg);
-    exit(exit_code);
-}
-
-/**
- * main - Copies the content of one file to another.
+ * append_text_to_file - creates a file and puts text in it
+ * with 600 perms (do not change if it exists)
  *
- * Return: Always 0.
+ * @filename: name for file
+ * @text_content: text to put into file
+ *
+ * Return: 1 on success, -1 on failure
  */
-int main(int argc, char **argv)
+int append_text_to_file(const char *filename, char *text_content)
 {
-    int fd_from, fd_to, read_count, write_count;
-    char buffer[1024];
+	int file;
+	ssize_t length = 0, inlen = 0;
+	char *ptr;
 
-    if (argc != 3)
-        error_exit("Usage: cp file_from file_to", 97);
+	if (filename == NULL)
+		return (-1);
 
-    fd_from = open(argv[1], O_RDONLY);
-    if (fd_from == -1)
-        error_exit("Error: Can't read from file", 98);
+	file = open(filename, O_WRONLY | O_APPEND);
+	if (file == -1)
+		return (-1);
 
-    fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-    if (fd_to == -1)
-        error_exit("Error: Can't write to file", 99);
+	if (text_content != NULL)
+	{
+		for (inlen = 0, ptr = text_content; *ptr; ptr++)
+			inlen++;
+		length = write(file, text_content, inlen);
+	}
 
-    while ((read_count = read(fd_from, buffer, sizeof(buffer))) > 0)
-    {
-        write_count = write(fd_to, buffer, read_count);
-        if (write_count == -1)
-            error_exit("Error: Can't write to file", 99);
-    }
-
-    if (read_count == -1)
-        error_exit("Error: Can't read from file", 98);
-
-    if (close(fd_from) == -1)
-        error_exit("Error: Can't close fd", 100);
-    
-    if (close(fd_to) == -1)
-        error_exit("Error: Can't close fd", 100);
-
-    return (0);
+	if (close(file) == -1 || inlen != length)
+		return (-1);
+	return (1);
 }
