@@ -2,65 +2,64 @@
 #include <stdlib.h>
 
 /**
- * delete_dnodeint_at_index - delete node at spacific index
- * @head: head of the list
+ * delete_dnodeint_at_index - delete node at given index
+ * @head: list
  * @index: index
- * Return: 0 / -1
+ * Return: 0 /-1
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *startLine;
+	dlistint_t *start;
 	unsigned int i;
-	unsigned int length;
-	length = len_node(&head);
+	unsigned int len;
+	len = len_node(&head);
 
-	startLine = *head;
+	start = *head;
 	if (*head == NULL)
 		return (-1);
 	if (index == 0)
 	{
-		startLine = startLine->next;
+		start = start->next;
 		free(*head);
-		*head = startLine;
-		if (startLine != NULL)
-			startLine->prev = NULL;
+		*head = start;
+		if (start != NULL)
+			start->prev = NULL;
 		return (1);
 	}
 	for (i = 0; i <= index - 1; i++)
 	{
-		startLine = startLine->next;
-		if (!startLine)
+		start = start->next;
+		if (!start)
 			return (-1);
 	}
-	if (length - 1 == index)
+	if (len - 1 == index)
 	{
-		startLine->prev->next = NULL;
-		free(startLine);
+		start->prev->next = NULL;
+		free(start);
 		return (1);
 	}
-	startLine->prev->next = startLine->next;
-	startLine->next->prev = startLine->prev;
-	free(startLine);
+	start->prev->next = start->next;
+	start->next->prev = start->prev;
+	free(start);
 	return (1);
 }
 
 /**
- * len_node - list length
+ * len_node - list len
  *
- * @node: list
- * Return: unsigned int
+ * @node:list
+ * Return:unsigned int
  */
-
 unsigned int len_node(dlistint_t **node)
 {
-	unsigned int length = 0;
-	dlistint_t *startLine;
+	unsigned int len = 0;
+	dlistint_t *start;
 
-	startLine = *node;
-	while (startLine != NULL)
+	start = *node;
+	while (start != NULL)
 	{
-		length += 1;
-		startLine = startLine->next;
+		len += 1;
+		start = start->next;
 	}
-	return (length);
+	return (len);
 }
