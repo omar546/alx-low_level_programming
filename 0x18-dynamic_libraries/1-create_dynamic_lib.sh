@@ -4,7 +4,7 @@
 gcc -Wall -Werror -Wextra -pedantic -c -fpic *.c
 
 # Create a dynamic library from the object files
-gcc -shared -o liball.so *.o
+gcc -shared -o libdynamic.so *.o
 
 # Clean up by removing the object files
 rm -f *.o
