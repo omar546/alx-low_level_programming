@@ -3,9 +3,9 @@
 /**
  * hash_table_create - creates a hash table
  * @sizee: size of the array
- *
- * Return: pointer to the newly created hash table
+ * Return: pointer to the new hash table
  */
+
 hash_table_t *hash_table_create(unsigned long int sizee)
 {
 hash_table_t *hash_table;
