@@ -1,4 +1,4 @@
-#include "hash_tables.h"
+#include "main.h"
 
 /**
  * key_index - generate distributed index for a hash
