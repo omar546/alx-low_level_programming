@@ -23,5 +23,6 @@ return (NULL);
 }
 for (j = 0; j < size; j++)
 hash_table->array[j] = NULL;
+memset(hash_table->array, 0, size * sizeof(hash_node_t *));
 return (hash_table);
 }

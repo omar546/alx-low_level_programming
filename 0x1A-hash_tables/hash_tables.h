@@ -1,5 +1,5 @@
-#ifndef FILE_MAIN
-#define FILE_MAIN
+#ifndef FILE_HASH
+#define FILE_HASH
 
 /**
  * struct hash_node_s - Node of a hash table
