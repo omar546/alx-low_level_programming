@@ -1,15 +1,14 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - prints a hash table
- * @ht: the hash table
+ * hash_table_print - prints the entire hash table
+ * @ht: a pointer to the hash table
  */
-
 void hash_table_print(const hash_table_t *ht)
 {
     unsigned long int i;
-    int first = 1;
     hash_node_t *node;
+    int first = 1;
 
     if (ht == NULL)
         return;
@@ -20,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
         node = ht->array[i];
         while (node != NULL)
         {
-            if (first == 0)
+            if (!first)
                 printf(", ");
             printf("'%s': '%s'", node->key, node->value);
             first = 0;
