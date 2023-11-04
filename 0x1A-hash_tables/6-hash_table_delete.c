@@ -1,3 +1,12 @@
+/*
+ * File_Name: 6-hash_table_delete.c
+ * Created: 4th oct, 2023
+ * Author: omar mekkawy (omar546)
+ * Size_Of_File: Undefined
+ * Project_Title: 0x1A-hash_tables
+ * Status: checking
+ */
+
 #include <stdio.h>
 #include "hash_tables.h"
 
